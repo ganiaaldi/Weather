@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WhiteBoldText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WhiteBoldTextSmall" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WhiteDarkText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WhiteDarkTextSmall" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

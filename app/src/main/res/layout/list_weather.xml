@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/yellow"
+            android:background="@drawable/ic_sunny"
+            />
+
+        <RelativeLayout
+        android:id="@+id/rvTop"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imgMini">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDay"
+            android:text="Tomorrow"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/WhiteDarkTextSmall"
+            android:textSize="16sp"
+            />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStatusRv"
+                android:text="Clear"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDay"
+                style="@style/WhiteDarkTextSmall"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rvBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/rvTop">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMaxTemp"
+                android:text="16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/WhiteDarkTextSmall"
+                android:textSize="16sp"
+                />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMinTemp"
+            android:text="16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMaxTemp"
+            style="@style/WhiteDarkTextSmall"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

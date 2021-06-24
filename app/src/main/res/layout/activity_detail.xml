@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:title="Detail"
+        android:background="@color/teal_200">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imgBack"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:text="Detail"
+                style="@style/WhiteBoldText"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_share_24" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbarDetail"
+        android:id="@+id/detailDate"
+        style="@style/WhiteDarkTextSmall"
+        android:text="Jumat,\n 20 01 2021"/>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvTemp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/rvSun"
+        app:layout_constraintTop_toBottomOf="@id/detailDate"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTempDetail"
+            style="@style/WhiteDarkText"
+            android:text="16"
+            android:gravity="center"
+            android:textSize="60sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTempMinDetail"
+            android:layout_below="@id/tvTempDetail"
+            style="@style/WhiteDarkText"
+            android:text="16"
+            android:gravity="center"
+            android:textSize="40sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHumidityDetail"
+            android:layout_below="@id/tvTempMinDetail"
+            android:gravity="left"
+            android:text="Humidity: 72"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPressureDetail"
+            android:layout_below="@id/tvHumidityDetail"
+            android:gravity="left"
+            android:text="Pressure : 1038 hpa"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWindyDetail"
+            android:layout_below="@id/tvPressureDetail"
+            android:gravity="left"
+            android:layout_marginStart="8dp"
+            android:text="Wind : 3km/7h"
+            android:textSize="18sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCityDetail"
+            android:layout_below="@id/tvWindyDetail"
+            android:gravity="left"
+            android:layout_marginStart="8dp"
+            android:text="Location : Bandung"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvSun"
+        app:layout_constraintLeft_toRightOf="@id/rvTemp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailDate"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imgSunDetail"
+            android:src="@drawable/ic_sunny"
+            android:tint="@color/yellow"
+            android:layout_centerHorizontal="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvStatusDetail"
+            android:layout_below="@id/imgSunDetail"
+            android:text="Clear"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNumberDetail"
+            android:layout_below="@id/tvStatusDetail"
+            style="@style/WhiteDarkText"
+            android:text="3"
+            android:textSize="50sp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
